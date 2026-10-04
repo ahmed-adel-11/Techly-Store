@@ -6,7 +6,7 @@ export const getCartProducts = createAsyncThunk<Product[]>(
   "cart/getCartProducts",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get("http://localhost:3000/api/cart");
+      const response = await axios.get("/api/cart");
 
       return response.data.products;
     } catch (error) {
